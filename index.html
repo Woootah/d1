@@ -32,11 +32,17 @@
     class="container bg-dark d-flex justify-content-center align-items-center flex-column text-center"
     style="height: 100vh; width: 100vw"
   >
-    <img src="./lab.jpg" alt="lab" style="width:200px; " class="d-none" id="lab">
+    <div id="lab" class="d-none bg-light shadow-sm d-flex justify-content-center flex-column p-3" style="width:300px;height:400px;">
+        <div style="width:100%;height:300px;overflow:hidden;">
+            <img src="./lab.jpg" alt="lab" id="lab" style="width:100%;max-width:100%;">
+        </div>
+        <p class="text-dark mt-4">I Love You 🫰💜</p>
+    </div>
+
     <h1 class="greet d-none mt-5" style="font-size: 2rem">
       Happy <span class="text-danger">Day 1</span> of Forever💜
     </h1>
-    <p class="greet-sub d-none">( I Love You 🫰)</p>
+
     <button class="clickMe btn btn-primary mt-5">Click Me</button>
 
     <script
@@ -47,7 +53,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script>
       let btn = document.querySelector(".clickMe");
-      let sub = document.querySelector(".greet-sub");
       let text = document.querySelector(".greet");
 
       btn.addEventListener("click", function () {
@@ -58,7 +63,6 @@
         body.classList.remove("bg-dark");
         body.classList.add("bg-light");
         text.classList.remove("d-none");
-        sub.classList.remove("d-none");
         btn.classList.add("d-none");
         lab.classList.remove("d-none");
 
